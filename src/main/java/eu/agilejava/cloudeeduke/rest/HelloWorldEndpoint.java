@@ -26,6 +26,6 @@ public class HelloWorldEndpoint {
     @Metered
     public Response doGet(@Email @QueryParam("email") String email) {
 
-        return Response.ok(String.format("Duke says %s!", message)).build();
+        return Response.ok(String.format("Duke says %s! My email is %s.", message, email)).build();
     }
 }
