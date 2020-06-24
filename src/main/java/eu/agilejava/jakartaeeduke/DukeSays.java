@@ -1,4 +1,4 @@
-package eu.agilejava.cloudeeduke.rest;
+package eu.agilejava.jakartaeeduke;
 
 public class DukeSays {
 
