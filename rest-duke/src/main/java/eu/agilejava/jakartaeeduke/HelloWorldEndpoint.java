@@ -1,5 +1,6 @@
 package eu.agilejava.jakartaeeduke;
 
+
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.validation.constraints.Email;
 import jakarta.ws.rs.GET;

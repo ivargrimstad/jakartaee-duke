@@ -6,7 +6,7 @@
     <artifactId>jakartaee-duke</artifactId>
     <name>Jakarta EE Duke</name>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <licenses>
         <license>
@@ -15,24 +15,9 @@
         </license>
     </licenses>
 
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-    </properties>
-
-    <build>
-        <finalName>jakartaee-duke</finalName>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>9.0.0-RC2</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>rest-duke</module>
+        <module>servlet-duke</module>
+    </modules>
 
 </project>
