@@ -1,4 +1,4 @@
-package eu.agilejava.jakartaeeduke;
+package eu.agilejava.dukes;
 
 public class DukeSays {
 

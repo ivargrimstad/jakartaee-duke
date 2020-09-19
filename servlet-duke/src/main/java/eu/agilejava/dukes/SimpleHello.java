@@ -7,7 +7,7 @@
  * 
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.demo.simple;
+package eu.agilejava.dukes;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
