@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>eu.agilejava</groupId>
-    <artifactId>rest-duke</artifactId>
-    <name>REST Duke</name>
+    <artifactId>complete-duke</artifactId>
+    <name>Complete Duke</name>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -23,15 +23,21 @@
     </properties>
 
     <build>
-        <finalName>rest-duke</finalName>
+        <finalName>complete-duke</finalName>
     </build>
 
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>9.0.0-RC3</version>
+            <version>8.0.0</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.15.2.0</version>
         </dependency>
     </dependencies>
 
