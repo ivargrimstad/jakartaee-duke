@@ -1,11 +1,11 @@
 package eu.agilejava.dukes;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 @DukesAnnotation(dukeMessage = "Hi there!")
 @Path("hello")
@@ -15,7 +15,7 @@ public class HelloDukeResource {
     DukesRepository dukesRepository;
 
     @GET
-    @Produces(APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public DukesGreeting sayHello() {
 
         DukesGreeting greeting = dukesRepository.findAll().stream()
