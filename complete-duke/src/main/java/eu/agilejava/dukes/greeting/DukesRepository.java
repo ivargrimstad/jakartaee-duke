@@ -1,4 +1,4 @@
-package eu.agilejava.dukes;
+package eu.agilejava.dukes.greeting;
 
 import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
@@ -6,7 +6,6 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.criteria.CriteriaQuery;
 
 import java.util.List;
-import java.util.Optional;
 
 @Dependent
 public class DukesRepository {

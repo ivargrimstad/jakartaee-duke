@@ -1,4 +1,4 @@
-package eu.agilejava.dukes;
+package eu.agilejava.dukes.annotation;
 
 import jakarta.enterprise.event.Observes;
 import jakarta.enterprise.inject.spi.Extension;
@@ -11,11 +11,11 @@ public class DukesExtension implements Extension {
 
     private static final Logger LOGGER = Logger.getLogger("eu.agilejava.dukes");
 
-    <T> void processAnnotatedType(@Observes @WithAnnotations(DukesAnnotation.class) ProcessAnnotatedType<T> dukeAnnotated) {
+    <T> void processAnnotatedType(@Observes @WithAnnotations(Dukes.class) ProcessAnnotatedType<T> dukeAnnotated) {
 
         LOGGER.config(() -> "==============================================================================");
-        LOGGER.config(() -> "Found @DukesAnnotation annotated class:" + dukeAnnotated.getAnnotatedType().getJavaClass().getName());
-        LOGGER.config(() -> "Dukes message is: " + dukeAnnotated.getAnnotatedType().getAnnotation(DukesAnnotation.class).dukeMessage());
+        LOGGER.config(() -> "Found @Dukes annotated class:" + dukeAnnotated.getAnnotatedType().getJavaClass().getName());
+        LOGGER.config(() -> "Dukes message is: " + dukeAnnotated.getAnnotatedType().getAnnotation(Dukes.class).message());
         LOGGER.config(() -> "==============================================================================");
     }
 }

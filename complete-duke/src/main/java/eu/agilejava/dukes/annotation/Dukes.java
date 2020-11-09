@@ -1,4 +1,4 @@
-package eu.agilejava.dukes;
+package eu.agilejava.dukes.annotation;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Stereotype;
@@ -11,8 +11,8 @@ import java.lang.annotation.*;
 @Documented
 @ApplicationScoped
 @Target(ElementType.TYPE)
-public @interface DukesAnnotation {
+public @interface Dukes {
 
     @Nonbinding
-    String dukeMessage();
+    String message();
 }

@@ -1,13 +1,14 @@
-package eu.agilejava.dukes;
+package eu.agilejava.dukes.greeting;
 
 
+import eu.agilejava.dukes.annotation.Dukes;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@DukesAnnotation(dukeMessage = "Hi there!")
+@Dukes(message = "Hi there!")
 @Path("hello")
 public class HelloDukeResource {
 

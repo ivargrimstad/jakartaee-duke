@@ -1,4 +1,4 @@
-package eu.agilejava.dukes;
+package eu.agilejava.dukes.greeting;
 
 
 import jakarta.persistence.*;
