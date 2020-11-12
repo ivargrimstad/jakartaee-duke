@@ -1,9 +1,8 @@
 package eu.agilejava.dukes.annotation;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.enterprise.inject.Stereotype;
-import jakarta.enterprise.util.Nonbinding;
-
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Stereotype;
+import javax.enterprise.util.Nonbinding;
 import java.lang.annotation.*;
 
 @Stereotype

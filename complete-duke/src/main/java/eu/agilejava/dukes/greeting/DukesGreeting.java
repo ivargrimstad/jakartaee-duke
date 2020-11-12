@@ -1,7 +1,7 @@
 package eu.agilejava.dukes.greeting;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name ="greeting")
