@@ -4,6 +4,7 @@ package eu.agilejava.dukes.greeting;
 import javax.persistence.*;
 
 @Entity
+@Cacheable(false)
 @Table(name ="greeting")
 public class DukesGreeting {
 
