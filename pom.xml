@@ -16,6 +16,7 @@
     </licenses>
 
     <modules>
+        <module>complete-duke</module>
         <module>rest-duke</module>
         <module>servlet-duke</module>
     </modules>
