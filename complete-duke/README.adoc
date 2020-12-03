@@ -1,0 +1,117 @@
+= Migrating Complete Duke from Jakarta EE 8 to Jakarta EE 9
+
+== Step 1: Update the Jakarta EE version in pom.xml
+
+Update your pom.xml file to use the Jakarta EE 9 provided dependency.
+
+.Before
+```
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>8.0.0</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+or
+
+```
+<dependency>
+    <groupId>javax</groupId>
+    <artifactId>javaee-api</artifactId>
+    <version>8.0</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+.After
+```
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>9.0.0</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+== Step 2: Fix the imports
+
+Go through your Java source code and change all Jakarta EE 8 imports to the Jakarta EE 9 counterparts.
+The IDE will help you here.
+
+.Before
+```
+import javax.*;
+```
+
+.After
+```
+import jakarta.*;
+```
+
+== Step 3: XML Schema Namespaces
+
+Update the XML scheme references in your XML descriptor files.
+Check the link:https://jakarta.ee/xml/ns/jakartaee/#9[Jakarta EE 9 schemas].
+In most cases, it is a simple replace of `http://xmlns.jcp.org/xml/ns/` with `https://jakarta.ee/xml/ns/` in
+addition to the schema version number.
+
+.Before
+```
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+```
+
+.After
+```
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+```
+
+== Step 4: Rename properties prefixed with javax.
+
+Rename all properties prefixed with `javax.` to be prefixed with `jakarta.`.
+See the example from my persistence.xml.
+
+.Before
+```
+<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+<property name="javax.persistence.sql-load-script-source" value="insertGreetings.sql"/>
+```
+
+.After
+```
+<property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+<property name="jakarta.persistence.sql-load-script-source" value="insertGreetings.sql"/>
+```
+
+== Step 5: Rename bootstrapping files
+
+Bootstrapping file names prefixed with `javax.`, such as CDI Extensions must be renamed to be prefixed
+with `jakarta.`.
+
+.Before
+```
+META-INF/services/javax.enterprise.inject.spi.Extension
+```
+
+.After
+```
+META-INF/services/jakarta.enterprise.inject.spi.Extension
+```
+
+== Step 6: Verify data and dynamic content
+
+You may have content that is version specific, or properties/class names that are build dynamically.
+If they contain the `javax` namespace in any way, this must be replaced by `jakarta`.
+
+In this example, it is just the greeting message that must be updated.
+
+.Before
+```
+insert into greeting(id,message,email) values (100, 'Howdy Jakarta EE 8!','duke@dukes.java')
+```
+
+.After
+```
+insert into greeting(id,message,email) values (100, 'Howdy Jakarta EE 9!','duke@dukes.java')
+```
