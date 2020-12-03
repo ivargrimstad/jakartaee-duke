@@ -1,5 +1,9 @@
 = Migrating Complete Duke from Jakarta EE 8 to Jakarta EE 9
 
+Check out the `start-tutorial` branch if you want to do the migration yourself.
+Follow the steps below to complete the migration of Complete Duke from Jakarta EE 8
+to Jakarta EE 9.
+
 == Step 1: Update the Jakarta EE version in pom.xml
 
 Update your pom.xml file to use the Jakarta EE 9 provided dependency.
@@ -118,4 +122,4 @@ insert into greeting(id,message,email) values (100, 'Howdy Jakarta EE 9!','duke@
 
 == Solution
 
-Check out the master branch in order to see the migrated Complete Duke.
+Check out the `master` branch in order to see the migrated Complete Duke.
