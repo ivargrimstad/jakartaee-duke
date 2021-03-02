@@ -1,0 +1,1 @@
+insert into greeting(id,message,email) values (100, 'Howdy Transformed Jakarta EE 9!','duke@eu.agilejava.dukes.java')

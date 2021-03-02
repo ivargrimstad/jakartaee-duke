@@ -19,6 +19,7 @@
         <module>complete-duke</module>
         <module>rest-duke</module>
         <module>servlet-duke</module>
+        <module>transformer-duke</module>
     </modules>
 
 </project>
