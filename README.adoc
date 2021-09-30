@@ -1,5 +1,0 @@
-= Jakarta EE Duke
-
-Samples for demos and talks around Jakarta EE
-
-Check out link:complete-duke/README.adoc[Complete Duke] for a full step-by-step example of how to migrate from Jakarta EE 8 to Jakarta EE 9.
