@@ -1,7 +1,7 @@
 package eu.agilejava.dukes.greeting;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Cacheable(false)

@@ -2,12 +2,11 @@ package eu.agilejava.dukes.greeting;
 
 
 import eu.agilejava.dukes.annotation.Dukes;
-
-import javax.ejb.EJB;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+import jakarta.ejb.EJB;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 
 @Dukes(message = "Hi there!")
