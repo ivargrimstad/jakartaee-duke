@@ -16,10 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 15
+    - name: Set up JDK 17
       uses: actions/setup-java@v2
       with:
-        java-version: '15'
-        distribution: 'adopt'
+        java-version: '17'
+        distribution: 'tem'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
