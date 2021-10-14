@@ -10,10 +10,11 @@ public class DukesService {
     @Inject
     private DukesRepository dukesRepository;
 
-    public DukesGreeting findGreeting() {
+    public DukesGreetingRecord findGreeting() {
 
         return dukesRepository.findAll().stream()
                 .findFirst()
-                .orElse(new DukesGreeting("Hi!", "undefined"));
+                .map(g -> new DukesGreetingRecord(g.getMessage(), g.getEmail()))
+                .orElse(new DukesGreetingRecord("Hi!", "undefined"));
     }
 }
