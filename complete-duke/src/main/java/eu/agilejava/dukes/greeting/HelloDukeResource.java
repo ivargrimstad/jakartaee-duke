@@ -19,7 +19,6 @@ public class HelloDukeResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public DukesGreetingRecord sayHello() {
-
         return dukesService.findGreeting();
     }
 }
