@@ -17,7 +17,7 @@
 
     <modules>
         <module>complete-duke</module>
-        <module>transformer-duke</module>
+        <module>core-duke</module>
     </modules>
 
     <build>
