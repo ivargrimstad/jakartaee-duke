@@ -1,10 +1,8 @@
 package eu.agilejava.dukes.greeting;
 
 
-import jakarta.ejb.Stateless;
-import jakarta.inject.Inject;
-
-import java.time.LocalDate;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
 
 @Stateless
 public class DukesService {
@@ -12,11 +10,10 @@ public class DukesService {
     @Inject
     private DukesRepository dukesRepository;
 
-    public DukesGreetingRecord findGreeting() {
+    public DukesGreeting findGreeting() {
 
         return dukesRepository.findAll().stream()
                 .findFirst()
-                .map(g -> new DukesGreetingRecord(g.getMessage(), LocalDate.of(2021,5,25)))
-                .orElse(new DukesGreetingRecord("Hi!", LocalDate.now()));
+                .orElse(new DukesGreeting("Hi!", "undefined"));
     }
 }
