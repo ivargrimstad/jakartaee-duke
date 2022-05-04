@@ -14,7 +14,7 @@ public class CompleteDukeApplication extends Application {
 
         Application app = new CompleteDukeApplication();
         SeBootstrap.Configuration config = SeBootstrap.Configuration.builder()
-                .port(8080)
+                .port(8081)
                 .build();
 
         SeBootstrap.start(app, config).thenAccept(instance -> {

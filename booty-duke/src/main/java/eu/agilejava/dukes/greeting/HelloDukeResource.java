@@ -13,6 +13,6 @@ public class HelloDukeResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public DukesGreetingRecord sayHello() {
-        return new DukesGreetingRecord("Howdy Jakarta Jakarta RESTful Web Services SE Bootstrap", LocalDate.now());
+        return new DukesGreetingRecord("Howdy Jakarta RESTful Web Services SE Bootstrap", LocalDate.now());
     }
 }
