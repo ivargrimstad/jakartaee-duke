@@ -18,6 +18,7 @@
     <modules>
         <module>complete-duke</module>
         <module>core-duke</module>
+        <module>booty-duke</module>
     </modules>
 
     <build>
@@ -26,7 +27,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.3.1</version>
+                    <version>3.3.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

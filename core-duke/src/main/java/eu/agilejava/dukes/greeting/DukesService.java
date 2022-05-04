@@ -1,19 +1,15 @@
 package eu.agilejava.dukes.greeting;
 
 
-import javax.ejb.Stateless;
-import javax.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 
-@Stateless
+import java.time.LocalDate;
+
+@RequestScoped
 public class DukesService {
 
-    @Inject
-    private DukesRepository dukesRepository;
 
-    public DukesGreeting findGreeting() {
-
-        return dukesRepository.findAll().stream()
-                .findFirst()
-                .orElse(new DukesGreeting("Hi!", "undefined"));
+    public DukesGreetingRecord findGreeting() {
+        return new DukesGreetingRecord("Howdy, Core Duke", LocalDate.now());
     }
 }
