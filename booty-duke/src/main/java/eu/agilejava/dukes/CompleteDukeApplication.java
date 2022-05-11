@@ -7,13 +7,14 @@ import jakarta.ws.rs.core.Application;
 
 import java.net.URI;
 
-@ApplicationPath("booty-duke")
+@ApplicationPath("")
 public class CompleteDukeApplication extends Application {
 
     public static void main(String[] args) throws InterruptedException {
 
         Application app = new CompleteDukeApplication();
         SeBootstrap.Configuration config = SeBootstrap.Configuration.builder()
+                .rootPath("booty-duke")
                 .port(8081)
                 .build();
 
