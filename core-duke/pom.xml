@@ -6,7 +6,7 @@
     <artifactId>core-duke</artifactId>
     <name>Core Duke</name>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <licenses>
         <license>
@@ -36,6 +36,12 @@
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-core-api</artifactId>
             <version>10.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.lang-model</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
 
