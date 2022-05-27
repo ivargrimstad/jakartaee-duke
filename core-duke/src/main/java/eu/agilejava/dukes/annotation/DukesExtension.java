@@ -13,10 +13,10 @@ public class DukesExtension implements BuildCompatibleExtension {
     @Enhancement(types = HelloDukeResource.class, withAnnotations = Dukes.class)
     public void enhanceDuke(ClassConfig dukeAnnotated) {
 
-        LOGGER.info(() -> "==============================================================================");
-        LOGGER.info(() -> "Found @Dukes annotated class:" + dukeAnnotated.info().name());
-        LOGGER.info(() -> "Dukes message is: " + dukeAnnotated.info().annotation(Dukes.class).member("message").asString());
-        LOGGER.info(() -> "==============================================================================");
+        LOGGER.config(() -> "==============================================================================");
+        LOGGER.config(() -> "Found @Dukes annotated class:" + dukeAnnotated.info().name());
+        LOGGER.config(() -> "Dukes message is: " + dukeAnnotated.info().annotation(Dukes.class).member("message").asString());
+        LOGGER.config(() -> "==============================================================================");
     }
 }
 
