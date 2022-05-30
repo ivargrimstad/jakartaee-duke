@@ -2,7 +2,9 @@ package eu.agilejava.dukes.annotation;
 
 
 import eu.agilejava.dukes.greeting.HelloDukeResource;
-import jakarta.enterprise.inject.build.compatible.spi.*;
+import jakarta.enterprise.inject.build.compatible.spi.BuildCompatibleExtension;
+import jakarta.enterprise.inject.build.compatible.spi.ClassConfig;
+import jakarta.enterprise.inject.build.compatible.spi.Enhancement;
 
 import java.util.logging.Logger;
 

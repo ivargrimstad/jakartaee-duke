@@ -16,7 +16,7 @@ public class DukesService {
 
         return dukesRepository.findAll().stream()
                 .findFirst()
-                .map(g -> new DukesGreetingRecord(g.getMessage(), LocalDate.of(2021,5,25)))
+                .map(g -> new DukesGreetingRecord(g.getMessage(), LocalDate.now()))
                 .orElse(new DukesGreetingRecord("Hi!", LocalDate.now()));
     }
 }
