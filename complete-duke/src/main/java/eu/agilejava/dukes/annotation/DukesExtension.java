@@ -13,7 +13,7 @@ public class DukesExtension implements Extension {
 
     <T> void processAnnotatedType(@Observes @WithAnnotations(Dukes.class) ProcessAnnotatedType<T> dukeAnnotated) {
 
-        LOGGER.config(() -> "==============================================================================");
+        LOGGER.warning(() -> "==============================================================================");
         LOGGER.config(() -> "Found @Dukes annotated class:" + dukeAnnotated.getAnnotatedType().getJavaClass().getName());
         LOGGER.config(() -> "Dukes message is: " + dukeAnnotated.getAnnotatedType().getAnnotation(Dukes.class).message());
         LOGGER.config(() -> "==============================================================================");
