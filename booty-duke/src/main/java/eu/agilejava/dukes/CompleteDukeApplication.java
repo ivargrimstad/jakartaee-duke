@@ -1,26 +1,27 @@
 package eu.agilejava.dukes;
 
 
+import static eu.agilejava.dukes.greeting.HelloDukeResource.PATH;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.SeBootstrap;
 import jakarta.ws.rs.core.Application;
 
-import java.net.URI;
-
 @ApplicationPath("")
 public class CompleteDukeApplication extends Application {
+
+    public static final String ROOT_PATH = "booty-duke";
 
     public static void main(String[] args) throws InterruptedException {
 
         Application app = new CompleteDukeApplication();
         SeBootstrap.Configuration config = SeBootstrap.Configuration.builder()
-                .rootPath("booty-duke")
-                .port(8081)
+                .rootPath(ROOT_PATH)
+                .port(8080)
                 .build();
 
         SeBootstrap.start(app, config).thenAccept(instance -> {
             instance.stopOnShutdown(stopResult -> stopResult.unwrap(Object.class));
-            System.out.printf("\nBooty Duke running at %s\n", instance.configuration().baseUri());
+            System.out.printf("\nBooty Duke running at %s/%s\n", instance.configuration().baseUri(), PATH);
             System.out.println("Send SIGKILL to shutdown.");
         });
 
