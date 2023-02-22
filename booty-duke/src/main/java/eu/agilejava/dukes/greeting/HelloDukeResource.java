@@ -7,8 +7,10 @@ import jakarta.ws.rs.core.MediaType;
 
 import java.time.LocalDate;
 
-@Path("hello")
+@Path(HelloDukeResource.PATH)
 public class HelloDukeResource {
+
+    public static final String PATH = "hello";
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
