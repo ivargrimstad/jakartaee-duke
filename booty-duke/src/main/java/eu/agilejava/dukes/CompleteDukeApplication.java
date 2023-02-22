@@ -9,12 +9,14 @@ import jakarta.ws.rs.core.Application;
 @ApplicationPath("")
 public class CompleteDukeApplication extends Application {
 
+    public static final String ROOT_PATH = "booty-duke";
+
     public static void main(String[] args) throws InterruptedException {
 
         Application app = new CompleteDukeApplication();
         SeBootstrap.Configuration config = SeBootstrap.Configuration.builder()
-                .rootPath("booty-duke")
-                .port(8081)
+                .rootPath(ROOT_PATH)
+                .port(8080)
                 .build();
 
         SeBootstrap.start(app, config).thenAccept(instance -> {
